@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
+// Time limit needed to fix
 int maxArea(int *height, int heightSize)
 {
     int maxSize = 0;
@@ -12,7 +13,7 @@ int maxArea(int *height, int heightSize)
         for (int j = i + 1; j < heightSize; j++)
         {
             minBar = height[i] < height[j] ? height[i] : height[j];
-            
+
             int currentArea = minBar * (j - i);
             if (currentArea > maxSize)
             {
